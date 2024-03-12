@@ -20,6 +20,13 @@ var UserSchema = new Schema({
     password: { type: String, required: true, select: false }
 });
 
+// const UserSchema = new mongoose.Schema({
+//     name: String,
+//     username: { type: String, unique: true },
+//     password: String, // this should be hashed in real-world scenario
+//   });
+  
+
 UserSchema.pre('save', function(next) {
     var user = this;
 
