@@ -130,7 +130,7 @@ router.route('/movies')
     const movie = new Movie(req.body);
     if (movie.actors.length === 0) {
         o.status = 200;
-        o.message = "Actors can't be blank";
+        o.message = "FAIL: Actors can't be blank";
         o.headers = req.headers;
         o.query = req.query;
         o.key = env.UNIQUE_KEY;
